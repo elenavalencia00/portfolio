@@ -285,19 +285,20 @@ font-family: Consolas;
   padding: 10px;
 }
 
-/* Imagen del proyecto */
 .project-image {
-  flex: 1 1 200px;
-  max-width: 250px;
+  flex: 1 1 200px;      /* Se adapta al espacio disponible */
+  max-width: 250px;     /* Ancho máximo */
+  aspect-ratio: 4 / 3;  /* Relación ancho/alto fija */
+  overflow: hidden;      /* Recorta lo que sobresalga */
+  border-radius: 5px;
 }
 
 .project-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;    /* Mantiene proporciones y recorta exceso */
   display: block;
   filter: contrast(1.1) brightness(0.95);
-  border-radius: 5px;
 }
 
 /* Contenido del proyecto */
@@ -306,11 +307,21 @@ font-family: Consolas;
   padding: 0.5rem 1rem;
 }
 
-.project-title {
+.project-title a {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   color: #2c33bf;
   transition: color 0.3s;
+  text-decoration: none;
+}
+
+.project-title:hover {
+   text-shadow:
+    2px 2px 0 #ffc107,
+   -2px -2px 0 #ffc107,
+    2px -2px 0 #ffc107,
+   -2px 2px 0 #ffc107;
+  
 }
 
 .project-description {
