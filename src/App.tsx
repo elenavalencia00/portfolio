@@ -202,9 +202,7 @@ export default function App() {
               </svg>
             </div>
             <span className="text-xs text-black font-bold text-shadow text-center">
-              CURRICULUM
-              <br />
-              VITAE
+              {t("social.cv")}
             </span>
           </div>
         </div>
@@ -223,17 +221,13 @@ export default function App() {
       >
         <div className="grid md:grid-cols-[200px_1fr] gap-6">
           <div className="flex flex-col items-center gap-3">
-            <div className="w-48 h-48 bg-pink-200 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-49 h-49 flex items-center justify-center overflow-hidden">
               <img
                 src="/avatar.gif"
                 alt="Elena Valencia"
                 className="w-full h-full object-contain"
               />
             </div>
-            <p className="text-xs text-center font-bold">
-              Elena Valencia Vilches
-            </p>
-            <p className="text-xs text-gray-600">{t("about.location")}</p>
           </div>
 
           <div className="space-y-4">
@@ -285,9 +279,9 @@ export default function App() {
         onMaximize={() => toggleMaximize("contact")}
         isMinimized={minimizedWindows.contact}
         isMaximized={maximizedWindows.contact}
-        width="w-[30%]"
+        width="w-[40%]"
       >
-        <div className="flex flex-col" style={{ height: "320px" }}>
+        <div className="flex flex-col">
           <div
             className="flex items-center gap-2 px-2 py-1.5 border-b"
             style={{
@@ -305,7 +299,7 @@ export default function App() {
               <div className="font-bold text-xs" style={{ color: "#000" }}>
                 {t("contact.name")}
               </div>
-              <div className="text-[10px]" style={{ color: "#666" }}>
+              <div className="text-xs" style={{ color: "#666" }}>
                 {t("contact.emailLabel")}
               </div>
             </div>
@@ -315,21 +309,15 @@ export default function App() {
             className="flex-1 overflow-y-auto p-2 space-y-2"
             style={{ background: "#fff" }}
           >
-            <div className="text-[11px]">
-              <div
-                className="font-bold text-[10px] mb-1"
-                style={{ color: "#c00" }}
-              >
+            <div className="text-sm">
+              <div className="font-bold text-xs mb-1" style={{ color: "#c00" }}>
                 {t("contact.says")}
               </div>
               <div style={{ color: "#000" }}>{t("contact.greeting")}</div>
             </div>
 
-            <div className="text-[11px]">
-              <div
-                className="font-bold text-[10px] mb-1"
-                style={{ color: "#c00" }}
-              >
+            <div className="text-sm">
+              <div className="font-bold text-xs mb-1" style={{ color: "#c00" }}>
                 {t("contact.says")}
               </div>
               <div style={{ color: "#000", lineHeight: "1.4" }}>
@@ -371,7 +359,7 @@ export default function App() {
               type="text"
               disabled
               placeholder={t("contact.placeholder")}
-              className="w-full px-2 py-1 border text-[10px]"
+              className="w-full px-2 py-1 border text-xs"
               style={{
                 borderColor: "#7f9db9",
                 background: "#fff",
@@ -792,7 +780,7 @@ export default function App() {
 
         <div className="flex-1" />
         <LanguageSwitcher />
-        <div className="text-white text-xs px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
+        <div className="text-white text-xs px-4 py-2 bg-blue-700/50 backdrop-blur-sm rounded-full border border-white/20">
           {new Date().toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",

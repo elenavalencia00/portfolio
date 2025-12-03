@@ -96,7 +96,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
                   textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4)",
                 }}
               >
-                elena_dev
+                Elena Valencia
               </p>
             </div>
           </div>

@@ -17,16 +17,16 @@ export function ContactCard() {
         📱 Phone
       </a>
       <a
-        href="#"
+        href="https://github.com/elenavalencia00"
         className="text-neon-blue hover:text-neon-mint transition-colors"
       >
-        🐙 GitHub
+        GitHub
       </a>
       <a
-        href="#"
+        href="https://www.linkedin.com/in/elena-valencia-vilches/"
         className="text-neon-blue hover:text-neon-mint transition-colors"
       >
-        💼 LinkedIn
+        LinkedIn
       </a>
     </div>
   );

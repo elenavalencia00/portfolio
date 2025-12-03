@@ -151,7 +151,7 @@ export function WindowModal({
           style={{ cursor: isMaximized ? "default" : "grab" }}
         >
           <span className="flex items-center gap-2">
-            <span className="text-xl">✦</span>
+            <span className="text-xl">•</span>
             {title}
           </span>
           <div className="y2k-title-buttons">

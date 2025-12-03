@@ -41,11 +41,11 @@
       },
       {
         "id": 2,
-        "name": "Portfolio Website",
-        "description": "Este portfolio con temática OS retro, construido con React y TypeScript. Componentes de ventana interactivos, soporte bilingüe (ES/EN) y diseño responsive.",
-        "tech": ["React", "TypeScript", "Vite", "TailwindCSS", "i18next"],
-        "image": "./samurai-duel.png",
-        "link": "https://github.com/elenavalencia00"
+        "name": "Pirate Chat",
+        "description": "Aplicación de chat en tiempo real que traduce automáticamente los mensajes del inglés a jerga pirata.",
+        "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
+        "image": "./piratechat.PNG",
+        "link": "https://pirate-chat.vercel.app/"
       },
       {
         "id": 3,
@@ -66,7 +66,7 @@
     ]
   },
   "contact": {
-    "title": "Chat",
+    "title": "Contacto",
     "name": "Elena Valencia",
     "email": "elenavalenciavilches@gmail.com",
     "emailLabel": "elenavalencia00@hotmail.com",
@@ -74,7 +74,7 @@
     "github": "https://github.com/elenavalencia00",
     "linkedin": "https://www.linkedin.com/in/elena-valencia-vilches",
     "says": "Elena Valencia dice:",
-    "greeting": "¡Hola! Gracias por visitar mi portfolio. Aquí está mi información de contacto:",
+    "greeting": "¡Hola! Gracias por visitar mi portfolio.",
     "emailText": "Email:",
     "phoneText": "Teléfono:",
     "githubText": "GitHub:",
@@ -94,7 +94,8 @@
   },
   "social": {
     "github": "GitHub",
-    "linkedin": "LinkedIn"
+    "linkedin": "LinkedIn",
+    "cv": "DESCARGA MI CV"
   },
   "recycle": {
     "title": "Papelera de reciclaje",
