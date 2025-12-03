@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
     "build": "chmod +x node_modules/.bin/vite && vite build",
+    "dev": "vite",
     "preview": "vite preview"
   },
   "dependencies": {
