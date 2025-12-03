@@ -1,0 +1,133 @@
+{
+  "about": {
+    "title": "Sobre Mí - Elena.exe",
+    "greeting": "¡Hola! Soy Elena",
+    "bio": "Soy desarrolladora web especializada en tecnologías frontend. Me centro en crear aplicaciones web robustas y escalables utilizando React y TypeScript. Me apasiona crear aplicaciones amenas para el usuario y escribir código limpio y fácil de mantener. Cuando no estoy programando, me gusta explorar nuevas tendencias tecnológicas o disfrutar de un libro.",
+    "location": "Málaga, España"
+  },
+  "tech": {
+    "title": "Stack Tecnológico",
+    "categories": {
+      "core": "Tecnologías Core",
+      "styling": "Estilos & UI",
+      "tools": "Herramientas & Otros"
+    },
+    "items": {
+      "react": "React 18",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript ES6+",
+      "java": "Java",
+      "springboot": "Spring Boot",
+      "vite": "Vite",
+      "tanstack": "TanStack Query",
+      "tailwind": "TailwindCSS",
+      "bootstrap": "Bootstrap",
+      "git": "Git & GitHub",
+      "vscode": "VS Code",
+      "restapi": "APIs REST",
+      "photoshop": "Photoshop"
+    }
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "items": [
+      {
+        "id": 1,
+        "name": "Espacio Dependencia",
+        "description": "SaaS en producción para el sector sociosanitario. Desarrollado con React, TypeScript y TanStack Query. Incluye gestión de formularios complejos, sincronización de estados y arquitectura de componentes reutilizables con HeroUI.",
+        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI"],
+        "image": "https://via.placeholder.com/400x250/0054E3/FFFFFF?text=Espacio+Dependencia",
+        "link": "https://github.com/elenavalencia00"
+      },
+      {
+        "id": 2,
+        "name": "Portfolio Website",
+        "description": "Este portfolio con temática OS retro, construido con React y TypeScript. Componentes de ventana interactivos, soporte bilingüe (ES/EN) y diseño responsive.",
+        "tech": ["React", "TypeScript", "Vite", "TailwindCSS", "i18next"],
+        "image": "./samurai-duel.png",
+        "link": "https://github.com/elenavalencia00"
+      },
+      {
+        "id": 3,
+        "name": "Samurai Duel",
+        "description": "Juego de lucha en 2D de estilo retro donde dos samuráis se enfrentan en duelos rápidos.",
+        "tech": ["JavaScript", "HTML5 Canvas", "CSS"],
+        "image": "./samurai-duel.PNG",
+        "link": "https://elenavalencia00.github.io/Samurai-Duel/"
+      },
+      {
+        "id": 4,
+        "name": "Homer's Web Site",
+        "description": "La mejor página web de todos los tiempos, creada por Homer Simpson.",
+        "tech": ["HTML", "CSS"],
+        "image": "./homer.PNG",
+        "link": "https://elenavalencia00.github.io/Homer-s-Web-Page/"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Chat",
+    "name": "Elena Valencia",
+    "email": "elenavalenciavilches@gmail.com",
+    "emailLabel": "elenavalencia00@hotmail.com",
+    "phone": "+34 654 81 42 76",
+    "github": "https://github.com/elenavalencia00",
+    "linkedin": "https://www.linkedin.com/in/elena-valencia-vilches",
+    "says": "Elena Valencia dice:",
+    "greeting": "¡Hola! Gracias por visitar mi portfolio. Aquí está mi información de contacto:",
+    "emailText": "Email:",
+    "phoneText": "Teléfono:",
+    "githubText": "GitHub:",
+    "linkedinText": "LinkedIn:",
+    "available": "¡Disponible para nuevos proyectos!",
+    "placeholder": "Escribe aquí un mensaje...",
+    "fontButton": "Fuente",
+    "emojiButton": "Emoticono",
+    "winkButton": "Guiño",
+    "buzzButton": "Zumbido"
+  },
+  "music": {
+    "title": "Música"
+  },
+  "game": {
+    "title": "Samurai Duel"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "recycle": {
+    "title": "Papelera de reciclaje",
+    "columns": {
+      "name": "Nombre",
+      "size": "Tamaño",
+      "type": "Tipo"
+    },
+    "types": {
+      "text": "Documento de texto",
+      "word": "Documento de Word",
+      "folder": "Carpeta de archivos",
+      "javascript": "Archivo JavaScript",
+      "pdf": "Documento PDF",
+      "log": "Archivo de registro",
+      "application": "Aplicación"
+    },
+    "itemCount": "{{count}} elementos"
+  },
+  "errorlog": {
+    "title": "Detalles:",
+    "eyes": "Ojos",
+    "legs": "Patas",
+    "behavior": "Comportamiento",
+    "funny": "gracioso"
+  },
+  "ui": {
+    "close": "Cerrar",
+    "minimize": "Minimizar",
+    "maximize": "Maximizar",
+    "start": "Inicio",
+    "switchLang": "EN",
+    "viewProject": "Ver Proyecto",
+    "learnMore": "Saber Más"
+  }
+}

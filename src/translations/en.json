@@ -1,0 +1,125 @@
+{
+  "about": {
+    "title": "About Me - Elena.exe",
+    "greeting": "¡Hello! I'm Elena",
+    "bio": "I am a Web Developer specialized in Frontend technologies. I focus on building robust and scalable web applications using React and TypeScript. I'm passionate about creating neat user experiences and writing clean, maintainable code. When I'm not coding, you can find me exploring new tech trends or enjoying a good book.",
+    "location": "Málaga, Spain"
+  },
+  "tech": {
+    "title": "Tech Stack",
+    "categories": {
+      "core": "Core Technologies",
+      "styling": "Styling & UI",
+      "tools": "Tools & Others"
+    },
+    "items": {
+      "react": "React 18",
+      "typescript": "TypeScript",
+      "javascript": "JavaScript ES6+",
+      "java": "Java",
+      "springboot": "Spring Boot",
+      "vite": "Vite",
+      "tanstack": "TanStack Query",
+      "tailwind": "TailwindCSS",
+      "bootstrap": "Bootstrap",
+      "git": "Git & GitHub",
+      "vscode": "VS Code",
+      "restapi": "REST APIs",
+      "photoshop": "Photoshop"
+    }
+  },
+  "projects": {
+    "title": "My Projects",
+    "items": [
+      {
+        "id": 1,
+        "name": "Espacio Dependencia",
+        "description": "SaaS currently in production for the social-healthcare sector. Built with React, TypeScript, and TanStack Query. Features complex form management, state synchronization, and reusable component architecture with HeroUI.",
+        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI"],
+        "image": "https://via.placeholder.com/400x250/0054E3/FFFFFF?text=Espacio+Dependencia",
+        "link": "https://github.com/elenavalencia00"
+      },
+      {
+        "id": 2,
+        "name": "Portfolio Website",
+        "description": "This Windows XP-themed portfolio built with React and TypeScript. Features authentic XP aesthetics, interactive window components, bilingual support (ES/EN), and responsive design.",
+        "tech": ["React", "TypeScript", "Vite", "TailwindCSS", "i18next"],
+        "image": "https://via.placeholder.com/400x250/3C8CFF/FFFFFF?text=Portfolio+XP",
+        "link": "https://github.com/elenavalencia00"
+      },
+      {
+        "id": 3,
+        "name": "Weather Dashboard",
+        "description": "Real-time weather application with geolocation, 7-day forecasts, and interactive maps. Built with React and integrates multiple weather APIs for accurate data.",
+        "tech": ["React", "JavaScript", "REST API", "Leaflet", "Bootstrap"],
+        "image": "https://via.placeholder.com/400x250/6BA5E7/FFFFFF?text=Weather+App",
+        "link": "https://github.com/elenavalencia00"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Chat",
+    "name": "Elena Valencia",
+    "email": "elenavalenciavilches@gmail.com",
+    "emailLabel": "elenavalencia00@hotmail.com",
+    "phone": "+34 654 81 42 76",
+    "github": "https://github.com/elenavalencia00",
+    "linkedin": "https://www.linkedin.com/in/elena-valencia-vilches",
+    "says": "Elena Valencia says:",
+    "greeting": "Hello! Thanks for visiting my portfolio. Here's my contact information:",
+    "emailText": "Email:",
+    "phoneText": "Phone:",
+    "githubText": "GitHub:",
+    "linkedinText": "LinkedIn:",
+    "available": "Available for new projects!",
+    "placeholder": "Type a message here...",
+    "fontButton": "Font",
+    "emojiButton": "Emoticon",
+    "winkButton": "Wink",
+    "buzzButton": "Buzz"
+  },
+  "music": {
+    "title": "Music"
+  },
+  "game": {
+    "title": "Samurai Duel"
+  },
+  "social": {
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "recycle": {
+    "title": "Recycle Bin",
+    "columns": {
+      "name": "Name",
+      "size": "Size",
+      "type": "Type"
+    },
+    "types": {
+      "text": "Text Document",
+      "word": "Word Document",
+      "folder": "File Folder",
+      "javascript": "JavaScript File",
+      "pdf": "PDF Document",
+      "log": "Log File",
+      "application": "Application"
+    },
+    "itemCount": "{{count}} items"
+  },
+  "errorlog": {
+    "title": "Details:",
+    "eyes": "Eyes",
+    "legs": "Legs",
+    "behavior": "Behavior",
+    "funny": "funny"
+  },
+  "ui": {
+    "close": "Close",
+    "minimize": "Minimize",
+    "maximize": "Maximize",
+    "start": "Start",
+    "switchLang": "ES",
+    "viewProject": "View Project",
+    "learnMore": "Learn More"
+  }
+}
