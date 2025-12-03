@@ -37,7 +37,6 @@ export function WindowModal({
   const [isInitialized, setIsInitialized] = useState(false);
   const windowRef = useRef<HTMLDivElement>(null);
 
-  // Center window on first open
   useEffect(() => {
     if (isOpen && !isInitialized && windowRef.current && !isMaximized) {
       const rect = windowRef.current.getBoundingClientRect();
@@ -55,19 +54,16 @@ export function WindowModal({
     }
   }, [isOpen, isInitialized, isMaximized, initialPosition]);
 
-  // Reset initialization when window closes
   useEffect(() => {
     if (!isOpen) {
       setIsInitialized(false);
     }
   }, [isOpen]);
 
-  // Center window when restoring from maximized
   useEffect(() => {
     if (isMaximized) {
       setPosition({ x: 0, y: 0 });
     } else if (windowRef.current && isInitialized) {
-      // Recenter when un-maximizing
       const rect = windowRef.current.getBoundingClientRect();
       const screenWidth = window.innerWidth;
       const screenHeight = window.innerHeight;
@@ -132,7 +128,6 @@ export function WindowModal({
         pointerEvents: "none",
       }}
     >
-      {/* Window */}
       <div
         ref={windowRef}
         className={`y2k-window ${

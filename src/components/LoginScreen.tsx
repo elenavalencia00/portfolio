@@ -7,10 +7,16 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
     <div
       className="fixed inset-0 flex items-center justify-center"
       style={{
-        background: "#ffb3d9",
+        background: "#d1fdf9ff",
       }}
     >
-      <div className="flex rounded-lg overflow-hidden shadow-2xl">
+      <div
+        className="flex rounded-lg overflow-hidden"
+        style={{
+          boxShadow:
+            "0 12px 40px rgba(0, 0, 0, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3)",
+        }}
+      >
         <div
           className="flex flex-col items-end justify-center pr-8"
           style={{
@@ -40,7 +46,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
               marginBottom: "16px",
             }}
           >
-            elenOS
+            elenaOS
           </h1>
           <h2
             style={{
@@ -68,7 +74,6 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
             onClick={onLogin}
           >
             <div className="flex items-center gap-4">
-              {/* Avatar */}
               <div
                 className="rounded overflow-hidden border-2 border-white shadow-lg flex-shrink-0"
                 style={{
@@ -91,7 +96,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
                   textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4)",
                 }}
               >
-                Elena Valencia
+                elena_dev
               </p>
             </div>
           </div>
