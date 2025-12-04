@@ -55,6 +55,25 @@ export default function App() {
   });
 
   const [startMenuOpen, setStartMenuOpen] = useState(false);
+  const [windowZIndexes, setWindowZIndexes] = useState<Record<string, number>>({
+    about: 1000,
+    tech: 1000,
+    projects: 1000,
+    contact: 1000,
+    music: 1000,
+    game: 1000,
+    recycle: 1000,
+    bug: 1000,
+    trojan: 1000,
+    errorlog: 1000,
+  });
+  const [maxZIndex, setMaxZIndex] = useState(1000);
+
+  const bringToFront = (window: keyof typeof openWindows) => {
+    const newZIndex = maxZIndex + 1;
+    setMaxZIndex(newZIndex);
+    setWindowZIndexes((prev) => ({ ...prev, [window]: newZIndex }));
+  };
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -226,6 +245,8 @@ export default function App() {
         isMaximized={maximizedWindows.about}
         width="w-[45%]"
         height="max-h-[50vh]"
+        zIndex={windowZIndexes.about}
+        onFocus={() => bringToFront("about")}
       >
         <div className="grid md:grid-cols-[200px_1fr] gap-6">
           <div className="flex flex-col items-center gap-3">
@@ -257,6 +278,8 @@ export default function App() {
         isMaximized={maximizedWindows.tech}
         width="w-[50%]"
         height="max-h-[55vh]"
+        zIndex={windowZIndexes.tech}
+        onFocus={() => bringToFront("tech")}
       >
         <TechStack />
       </WindowModal>
@@ -271,6 +294,8 @@ export default function App() {
         isMaximized={maximizedWindows.projects}
         width="w-[65%]"
         height="max-h-[60vh]"
+        zIndex={windowZIndexes.projects}
+        onFocus={() => bringToFront("projects")}
       >
         <div className="grid grid-cols-2 gap-3">
           {projects.map((project) => (
@@ -288,6 +313,8 @@ export default function App() {
         isMinimized={minimizedWindows.contact}
         isMaximized={maximizedWindows.contact}
         width="w-[40%]"
+        zIndex={windowZIndexes.contact}
+        onFocus={() => bringToFront("contact")}
       >
         <div className="flex flex-col">
           <div
@@ -388,6 +415,8 @@ export default function App() {
         height="h-auto"
         noScroll={true}
         noPadding={true}
+        zIndex={windowZIndexes.music}
+        onFocus={() => bringToFront("music")}
       >
         <div className="flex justify-center">
           <MusicPlayer
@@ -445,6 +474,8 @@ export default function App() {
         height="h-[576px]"
         noPadding={true}
         initialPosition="top-center"
+        zIndex={windowZIndexes.game}
+        onFocus={() => bringToFront("game")}
       >
         <iframe
           src="/game/index.html"
@@ -465,6 +496,8 @@ export default function App() {
         isMaximized={maximizedWindows.recycle}
         width="w-[40%]"
         height="h-[60vh]"
+        zIndex={windowZIndexes.recycle}
+        onFocus={() => bringToFront("recycle")}
       >
         <div className="bg-white h-full flex flex-col">
           <div className="flex items-center px-2 py-2 bg-gradient-to-b from-gray-100 to-gray-200 border-b border-gray-300 text-xs font-bold">
@@ -514,6 +547,8 @@ export default function App() {
         isMaximized={maximizedWindows.bug}
         width="w-[350px]"
         height="h-[400px]"
+        zIndex={windowZIndexes.bug}
+        onFocus={() => bringToFront("bug")}
       >
         <div className="h-full overflow-hidden flex items-center justify-center bg-white">
           <img
@@ -534,6 +569,8 @@ export default function App() {
         isMaximized={maximizedWindows.trojan}
         width="w-[350px]"
         height="h-[400px]"
+        zIndex={windowZIndexes.trojan}
+        onFocus={() => bringToFront("trojan")}
       >
         <div className="h-full overflow-hidden flex items-center justify-center bg-white">
           <img
@@ -554,6 +591,8 @@ export default function App() {
         isMaximized={maximizedWindows.errorlog}
         width="w-[400px]"
         height="h-[300px]"
+        zIndex={windowZIndexes.errorlog}
+        onFocus={() => bringToFront("errorlog")}
       >
         <div className="p-3 bg-white font-mono text-sm">
           <p className="mb-2 font-bold">{t("errorlog.title")}</p>

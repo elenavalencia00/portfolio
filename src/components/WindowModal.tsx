@@ -14,6 +14,8 @@ type WindowModalProps = {
   noPadding?: boolean;
   noScroll?: boolean;
   initialPosition?: "center" | "top-center";
+  zIndex?: number;
+  onFocus?: () => void;
 };
 
 export function WindowModal({
@@ -30,6 +32,8 @@ export function WindowModal({
   noPadding = false,
   noScroll = false,
   initialPosition = "center",
+  zIndex = 1000,
+  onFocus,
 }: WindowModalProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -124,9 +128,10 @@ export function WindowModal({
       className="fixed inset-0 flex items-center justify-center p-4"
       style={{
         display: isMinimized ? "none" : "flex",
-        zIndex: 1000,
+        zIndex: zIndex,
         pointerEvents: "none",
       }}
+      onMouseDown={onFocus}
     >
       <div
         ref={windowRef}
