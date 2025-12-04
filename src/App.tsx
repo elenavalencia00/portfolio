@@ -10,7 +10,7 @@ import { MusicPlayer } from "./components/MusicPlayer";
 import { useEffect } from "react";
 
 export default function App() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const projects = t("projects.items", { returnObjects: true }) as any[];
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -191,8 +191,16 @@ export default function App() {
             className="flex flex-col items-center gap-2 p-2 hover:bg-white/20 rounded-lg transition-all cursor-pointer"
             onClick={() => {
               const link = document.createElement("a");
-              link.href = "/Elena_Valencia_CV.pdf";
-              link.download = "Elena_Valencia_CV.pdf";
+              const cvFile =
+                i18n.language === "es"
+                  ? "/Elena_Valencia_CV.pdf"
+                  : "/Elena_Valencia_CV_English.pdf";
+              const fileName =
+                i18n.language === "es"
+                  ? "Elena_Valencia_CV.pdf"
+                  : "Elena_Valencia_CV_English.pdf";
+              link.href = cvFile;
+              link.download = fileName;
               link.click();
             }}
           >
