@@ -2,7 +2,7 @@
   "about": {
     "title": "Sobre Mí - Elena.exe",
     "greeting": "¡Hola! Soy Elena",
-    "bio": "Soy desarrolladora web especializada en tecnologías frontend. Mi fuerte es crear aplicaciones web robustas y escalables utilizando React y TypeScript. Estoy centrada en crear aplicaciones amenas para el usuario y escribir código limpio y fácil de mantener. Cuando no estoy programando, me gusta explorar nuevas tendencias tecnológicas o disfrutar de un libro.",
+    "bio": "Soy desarrolladora web especializada en tecnologías frontend. Me gusta diseñar experiencias ligeras, agradables y fáciles de usar. Cuando no estoy programando, probablemente estoy leyendo, curioseando distintas tecnologías o pensando en mi próximo proyecto.",
     "location": "Málaga, España"
   },
   "tech": {
@@ -34,10 +34,11 @@
       {
         "id": 1,
         "name": "Espacio Dependencia",
-        "description": "SaaS en producción para el sector sociosanitario. Desarrollado con React, TypeScript y TanStack Query. Incluye gestión de formularios complejos, sincronización de estados y arquitectura de componentes reutilizables con HeroUI.",
-        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI"],
-        "image": "https://via.placeholder.com/400x250/0054E3/FFFFFF?text=Espacio+Dependencia",
-        "link": "https://github.com/elenavalencia00"
+        "description": "SaaS en producción para el sector socio-sanitario. Desarrollo y mantenimiento de la interfaz de usuario, consumo de APIs, gestión de estados y formularios complejos y creación de componentes reutilizables ",
+        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI", "TailwindCSS"],
+        "image": "/ed.PNG",
+        "link": "https://github.com/elenavalencia00",
+        "hideButton": true
       },
       {
         "id": 2,
@@ -57,11 +58,19 @@
       },
       {
         "id": 4,
-        "name": "Homer's Web Site",
+        "name": "Homer's Web Page",
         "description": "La mejor página web de todos los tiempos, creada por Homer Simpson.",
         "tech": ["HTML", "CSS"],
         "image": "./homer.PNG",
         "link": "https://elenavalencia00.github.io/Homer-s-Web-Page/"
+      },
+      {
+        "id": 5,
+        "name": "elenOS",
+        "description": "Portfolio que simula un OS retro. Diseño responsive, componentización modular, internacionalización e interfaz altamente interactiva.",
+        "tech": ["React", "TypeScript", "TailwindCSS", "Vite", "i18next"],
+        "image": "/portfolio.PNG",
+        "link": "https://github.com/elenavalencia00/portfolio"
       }
     ]
   },
@@ -69,7 +78,7 @@
     "title": "Contacto",
     "name": "Elena Valencia",
     "email": "elenavalenciavilches@gmail.com",
-    "emailLabel": "elenavalencia00@hotmail.com",
+    "emailLabel": "elenavalenciavilches@gmail.com",
     "phone": "+34 654 81 42 76",
     "github": "https://github.com/elenavalencia00",
     "linkedin": "https://www.linkedin.com/in/elena-valencia-vilches",
@@ -129,6 +138,7 @@
     "start": "Inicio",
     "switchLang": "EN",
     "viewProject": "Ver Proyecto",
-    "learnMore": "Saber Más"
+    "learnMore": "Saber Más",
+    "logout": "Cerrar sesión"
   }
 }

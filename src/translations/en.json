@@ -2,7 +2,7 @@
   "about": {
     "title": "About Me - Elena.exe",
     "greeting": "¡Hello! I'm Elena",
-    "bio": "I am a Web Developer specialized in Frontend technologies. I focus on building robust and scalable web applications using React and TypeScript. I'm passionate about creating neat user experiences and writing clean, maintainable code. When I'm not coding, you can find me exploring new tech trends or enjoying a good book.",
+    "bio": "I'm a web developer specialized in frontend technologies. I enjoy designing light, pleasant, and easy-to-use experiences. When I'm not coding, I'm probably reading, exploring differente technologies, or thinking about my next project.",
     "location": "Málaga, Spain"
   },
   "tech": {
@@ -34,26 +34,43 @@
       {
         "id": 1,
         "name": "Espacio Dependencia",
-        "description": "SaaS currently in production for the social-healthcare sector. Built with React, TypeScript, and TanStack Query. Features complex form management, state synchronization, and reusable component architecture with HeroUI.",
-        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI"],
-        "image": "https://via.placeholder.com/400x250/0054E3/FFFFFF?text=Espacio+Dependencia",
-        "link": "https://github.com/elenavalencia00"
+        "description": "SaaS currently in production for the social-healthcare sector. Features complex form management, state synchronization, and reusable component architecture.",
+        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI","i18next"],
+        "image": "/ed.PNG",
+        "link": "https://github.com/elenavalencia00",
+        "hideButton": true
       },
       {
         "id": 2,
-        "name": "Portfolio Website",
-        "description": "This Windows XP-themed portfolio built with React and TypeScript. Features authentic XP aesthetics, interactive window components, bilingual support (ES/EN), and responsive design.",
-        "tech": ["React", "TypeScript", "Vite", "TailwindCSS", "i18next"],
-        "image": "https://via.placeholder.com/400x250/3C8CFF/FFFFFF?text=Portfolio+XP",
-        "link": "https://github.com/elenavalencia00"
+        "name": "Pirate Chat",
+        "description": "Real-time chat application that automatically translates messages from English to pirate slang.",
+        "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
+        "image": "./piratechat.PNG",
+        "link": "https://pirate-chat.vercel.app/"
       },
       {
         "id": 3,
-        "name": "Weather Dashboard",
-        "description": "Real-time weather application with geolocation, 7-day forecasts, and interactive maps. Built with React and integrates multiple weather APIs for accurate data.",
-        "tech": ["React", "JavaScript", "REST API", "Leaflet", "Bootstrap"],
-        "image": "https://via.placeholder.com/400x250/6BA5E7/FFFFFF?text=Weather+App",
-        "link": "https://github.com/elenavalencia00"
+        "name": "Samurai Duel",
+        "description": "Retro-style 2D fighting game where two samurai face off in quick duels.",
+        "tech": ["JavaScript", "HTML5 Canvas", "CSS"],
+        "image": "./samurai-duel.PNG",
+        "link": "https://elenavalencia00.github.io/Samurai-Duel/"
+      },
+      {
+        "id": 4,
+        "name": "Homer's Web Site",
+        "description": "The best website of all time, created by Homer Simpson.",
+        "tech": ["HTML", "CSS"],
+        "image": "./homer.PNG",
+        "link": "https://elenavalencia00.github.io/Homer-s-Web-Page/"
+      },
+      {
+        "id": 5,
+        "name": "Elena Valencia Portfolio",
+        "description": "A portfolio that emulates a retro OS — responsive design, modular components, internationalization, and a highly interactive interface.",
+        "tech": ["React", "TypeScript", "TailwindCSS", "Vite", "i18next"],
+        "image": "/portfolio.PNG",
+        "link": "https://github.com/elenavalencia00/portfolio"
       }
     ]
   },
@@ -61,7 +78,7 @@
     "title": "Contact",
     "name": "Elena Valencia",
     "email": "elenavalenciavilches@gmail.com",
-    "emailLabel": "elenavalencia00@hotmail.com",
+    "emailLabel": "elenavalenciavilches@gmail.com",
     "phone": "+34 654 81 42 76",
     "github": "https://github.com/elenavalencia00",
     "linkedin": "https://www.linkedin.com/in/elena-valencia-vilches",
@@ -121,6 +138,7 @@
     "start": "Start",
     "switchLang": "ES",
     "viewProject": "View Project",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "logout": "Logout"
   }
 }

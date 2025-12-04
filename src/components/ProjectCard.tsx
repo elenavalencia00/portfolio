@@ -7,6 +7,7 @@ type Project = {
   tech: string[];
   image: string;
   link: string;
+  hideButton?: boolean;
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -31,7 +32,7 @@ export function ProjectCard({ project }: { project: Project }) {
       <div className="mb-2">
         <p className="text-[10px] font-bold mb-1">Tech:</p>
         <div className="flex flex-wrap gap-1">
-          {project.tech.slice(0, 4).map((tech) => (
+          {project.tech.map((tech) => (
             <span
               key={tech}
               className="text-[10px] bg-gray-200 px-1.5 py-0.5 rounded"
@@ -41,14 +42,16 @@ export function ProjectCard({ project }: { project: Project }) {
           ))}
         </div>
       </div>
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block text-center text-xs px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 w-full"
-      >
-        {t("ui.viewProject")}
-      </a>
+      {!project.hideButton && (
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center text-xs px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700 w-full"
+        >
+          {t("ui.viewProject")}
+        </a>
+      )}
     </div>
   );
 }

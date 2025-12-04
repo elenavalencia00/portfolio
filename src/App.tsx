@@ -14,6 +14,7 @@ export default function App() {
   const projects = t("projects.items", { returnObjects: true }) as any[];
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   const [openWindows, setOpenWindows] = useState({
     about: false,
@@ -76,6 +77,14 @@ export default function App() {
   };
 
   useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (!startMenuOpen) return;
 
@@ -100,11 +109,13 @@ export default function App() {
   const openWindow = (window: keyof typeof openWindows) => {
     setOpenWindows((prev) => ({ ...prev, [window]: true }));
     setMinimizedWindows((prev) => ({ ...prev, [window]: false }));
+    bringToFront(window);
   };
 
   const closeWindow = (window: keyof typeof openWindows) => {
     setOpenWindows((prev) => ({ ...prev, [window]: false }));
     setMinimizedWindows((prev) => ({ ...prev, [window]: false }));
+    setMaximizedWindows((prev) => ({ ...prev, [window]: false }));
   };
 
   const minimizeWindow = (window: keyof typeof openWindows) => {
@@ -248,9 +259,9 @@ export default function App() {
         zIndex={windowZIndexes.about}
         onFocus={() => bringToFront("about")}
       >
-        <div className="grid md:grid-cols-[200px_1fr] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-4 md:gap-6">
           <div className="flex flex-col items-center gap-3">
-            <div className="w-49 h-49 flex items-center justify-center overflow-hidden">
+            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex items-center justify-center overflow-hidden">
               <img
                 src="/avatar.gif"
                 alt="Elena Valencia"
@@ -260,10 +271,12 @@ export default function App() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-blue-700">
+            <h2 className="text-xl md:text-2xl font-bold text-blue-700">
               {t("about.greeting")}
             </h2>
-            <p className="text-sm leading-relaxed">{t("about.bio")}</p>
+            <p className="text-sm md:text-base leading-relaxed">
+              {t("about.bio")}
+            </p>
           </div>
         </div>
       </WindowModal>
@@ -313,78 +326,109 @@ export default function App() {
         isMinimized={minimizedWindows.contact}
         isMaximized={maximizedWindows.contact}
         width="w-[40%]"
+        noPadding={true}
         zIndex={windowZIndexes.contact}
         onFocus={() => bringToFront("contact")}
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col h-full p-3">
           <div
-            className="flex items-center gap-2 px-2 py-1.5 border-b"
+            className="flex items-center gap-3 px-3 py-2 border-b"
             style={{
-              background: "linear-gradient(180deg, #f9f9f9 0%, #e8e8e8 100%)",
-              borderBottom: "1px solid #c0c0c0",
+              background: "linear-gradient(180deg, #e1f5fe 0%, #b3e5fc 100%)",
+              borderBottom: "1px solid #81d4fa",
             }}
           >
             <img
               src="/avatar.PNG"
               alt={t("contact.name")}
-              className="w-10 h-10 rounded border-2 object-contain"
-              style={{ borderColor: "#999" }}
+              className="w-14 h-14 rounded-lg border object-contain shadow-sm"
+              style={{ borderColor: "#0277bd" }}
             />
             <div className="flex-1">
-              <div className="font-bold text-xs" style={{ color: "#000" }}>
+              <div className="font-bold text-sm" style={{ color: "#01579b" }}>
                 {t("contact.name")}
               </div>
-              <div className="text-xs" style={{ color: "#666" }}>
-                {t("contact.emailLabel")}
-              </div>
             </div>
           </div>
 
           <div
-            className="flex-1 overflow-y-auto p-2 space-y-2"
-            style={{ background: "#fff" }}
+            className="flex-1 overflow-y-auto p-3 space-y-3"
+            style={{
+              background: "linear-gradient(180deg, #fafafa 0%, #f5f5f5 100%)",
+            }}
           >
-            <div className="text-sm">
-              <div className="font-bold text-xs mb-1" style={{ color: "#c00" }}>
-                {t("contact.says")}
+            <div className="flex justify-start">
+              <div
+                className="max-w-xs px-3 py-2 rounded-lg shadow-sm"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%)",
+                  border: "1px solid #90caf9",
+                  color: "#000",
+                }}
+              >
+                <div
+                  className="font-bold text-xs mb-1"
+                  style={{ color: "#d32f2f" }}
+                >
+                  {t("contact.says")}
+                </div>
+                <div className="text-sm">{t("contact.greeting")}</div>
               </div>
-              <div style={{ color: "#000" }}>{t("contact.greeting")}</div>
             </div>
 
-            <div className="text-sm">
-              <div className="font-bold text-xs mb-1" style={{ color: "#c00" }}>
-                {t("contact.says")}
-              </div>
-              <div style={{ color: "#000", lineHeight: "1.4" }}>
-                {t("contact.email")}
-                <br />
-                {t("contact.phone")}
-                <br />
-                <a
-                  href={t("contact.github")}
-                  className="underline"
-                  style={{ color: "#00f" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
+            <div className="flex justify-start">
+              <div
+                className="max-w-xs px-3 py-2 rounded-lg shadow-sm"
+                style={{
+                  background:
+                    "linear-gradient(180deg, #e3f2fd 0%, #bbdefb 100%)",
+                  border: "1px solid #90caf9",
+                  color: "#000",
+                }}
+              >
+                <div
+                  className="font-bold text-xs mb-1"
+                  style={{ color: "#d32f2f" }}
                 >
-                  @elenavalencia00
-                </a>
-                <br />
-                <a
-                  href={t("contact.linkedin")}
-                  className="underline"
-                  style={{ color: "#00f" }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Elena Valencia
-                </a>
+                  {t("contact.says")}
+                </div>
+                <div className="text-sm space-y-1">
+                  <div>
+                    <span className="font-medium">📧</span> {t("contact.email")}
+                  </div>
+                  <div>
+                    <span className="font-medium">📱</span> {t("contact.phone")}
+                  </div>
+                  <div>
+                    <a
+                      href={t("contact.github")}
+                      className="underline hover:no-underline"
+                      style={{ color: "#1976d2" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="font-medium">🐙</span> Github
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href={t("contact.linkedin")}
+                      className="underline hover:no-underline"
+                      style={{ color: "#1976d2" }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className="font-medium">💼</span> Linkedin
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div
-            className="border-t p-1.5"
+            className="border-t p-2 flex items-center gap-2"
             style={{
               background: "linear-gradient(180deg, #f9f9f9 0%, #e8e8e8 100%)",
               borderTop: "1px solid #c0c0c0",
@@ -394,12 +438,34 @@ export default function App() {
               type="text"
               disabled
               placeholder={t("contact.placeholder")}
-              className="w-full px-2 py-1 border text-xs"
+              className="flex-1 px-2 py-1 border text-xs rounded"
               style={{
                 borderColor: "#7f9db9",
                 background: "#fff",
               }}
             />
+            <button
+              disabled
+              className="px-2 py-1 text-xs border rounded"
+              style={{
+                borderColor: "#7f9db9",
+                background: "linear-gradient(180deg, #fff 0%, #f0f0f0 100%)",
+                color: "#666",
+              }}
+            >
+              {t("contact.fontButton")}
+            </button>
+            <button
+              disabled
+              className="px-2 py-1 text-xs border rounded"
+              style={{
+                borderColor: "#7f9db9",
+                background: "linear-gradient(180deg, #fff 0%, #f0f0f0 100%)",
+                color: "#666",
+              }}
+            >
+              😀
+            </button>
           </div>
         </div>
       </WindowModal>
@@ -417,6 +483,7 @@ export default function App() {
         noPadding={true}
         zIndex={windowZIndexes.music}
         onFocus={() => bringToFront("music")}
+        hideMaximize={true}
       >
         <div className="flex justify-center">
           <MusicPlayer
@@ -476,6 +543,7 @@ export default function App() {
         initialPosition="top-center"
         zIndex={windowZIndexes.game}
         onFocus={() => bringToFront("game")}
+        hideMaximize={true}
       >
         <iframe
           src="/game/index.html"
@@ -511,7 +579,7 @@ export default function App() {
                 className="flex items-center py-1 px-2 hover:bg-blue-100 cursor-pointer text-xs"
                 onClick={() => openWindow("bug")}
               >
-                <span className="w-[70%]">bug_critical.png</span>
+                <span className="w-[70%]">bug_critical</span>
                 <span className="w-[30%]">32 KB</span>
               </div>
               <div
@@ -538,7 +606,7 @@ export default function App() {
       </WindowModal>
 
       <WindowModal
-        title="bug_critical.png"
+        title="bug_critical"
         isOpen={openWindows.bug}
         onClose={() => closeWindow("bug")}
         onMinimize={() => minimizeWindow("bug")}
@@ -574,7 +642,7 @@ export default function App() {
       >
         <div className="h-full overflow-hidden flex items-center justify-center bg-white">
           <img
-            src="/trojan.PNG"
+            src="/trojan.gif"
             alt="Trojan"
             className="w-full h-full object-contain"
           />
@@ -594,7 +662,7 @@ export default function App() {
         zIndex={windowZIndexes.errorlog}
         onFocus={() => bringToFront("errorlog")}
       >
-        <div className="p-3 bg-white font-mono text-sm">
+        <div className="p-2 bg-white font-mono text-base">
           <p className="mb-2 font-bold">{t("errorlog.title")}</p>
           <p>- {t("errorlog.eyes")}: 2</p>
           <p>- {t("errorlog.legs")}: 6</p>
@@ -720,6 +788,23 @@ export default function App() {
                 />
                 <span>Recycle Bin</span>
               </div>
+              <hr className="start-menu-separator" />
+              <div
+                className="start-menu-logout"
+                onClick={() => {
+                  setIsLoggedIn(false);
+                  setStartMenuOpen(false);
+                }}
+              >
+                <div className="logout-icon">
+                  <img
+                    src="https://api.iconify.design/pixelarticons/logout.svg?color=%23ff0000&width=24&height=24"
+                    alt=""
+                    style={{ imageRendering: "pixelated" }}
+                  />
+                </div>
+                <span>{t("ui.logout")}</span>
+              </div>
             </div>
           </div>
         )}
@@ -823,12 +908,54 @@ export default function App() {
               Recycle Bin
             </button>
           )}
+          {openWindows.bug && (
+            <button
+              className={`taskbar-tab ${
+                !minimizedWindows.bug ? "taskbar-tab-active" : ""
+              }`}
+              onClick={() =>
+                minimizedWindows.bug
+                  ? restoreWindow("bug")
+                  : minimizeWindow("bug")
+              }
+            >
+              bug_critical.png
+            </button>
+          )}
+          {openWindows.trojan && (
+            <button
+              className={`taskbar-tab ${
+                !minimizedWindows.trojan ? "taskbar-tab-active" : ""
+              }`}
+              onClick={() =>
+                minimizedWindows.trojan
+                  ? restoreWindow("trojan")
+                  : minimizeWindow("trojan")
+              }
+            >
+              trojan.exe
+            </button>
+          )}
+          {openWindows.errorlog && (
+            <button
+              className={`taskbar-tab ${
+                !minimizedWindows.errorlog ? "taskbar-tab-active" : ""
+              }`}
+              onClick={() =>
+                minimizedWindows.errorlog
+                  ? restoreWindow("errorlog")
+                  : minimizeWindow("errorlog")
+              }
+            >
+              error-stack-0xFF00ABCD.log
+            </button>
+          )}
         </div>
 
         <div className="flex-1" />
         <LanguageSwitcher />
         <div className="text-white text-xs px-4 py-2 bg-blue-700/50 backdrop-blur-sm rounded-full border border-white/20">
-          {new Date().toLocaleTimeString([], {
+          {currentTime.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
           })}

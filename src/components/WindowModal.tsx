@@ -16,6 +16,7 @@ type WindowModalProps = {
   initialPosition?: "center" | "top-center";
   zIndex?: number;
   onFocus?: () => void;
+  hideMaximize?: boolean;
 };
 
 export function WindowModal({
@@ -34,6 +35,7 @@ export function WindowModal({
   initialPosition = "center",
   zIndex = 1000,
   onFocus,
+  hideMaximize = false,
 }: WindowModalProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
@@ -163,9 +165,11 @@ export function WindowModal({
             <div className="y2k-title-button" onClick={onMinimize}>
               _
             </div>
-            <div className="y2k-title-button" onClick={onMaximize}>
-              □
-            </div>
+            {!hideMaximize && (
+              <div className="y2k-title-button" onClick={onMaximize}>
+                □
+              </div>
+            )}
             <div className="y2k-title-button" onClick={onClose}>
               ✕
             </div>
