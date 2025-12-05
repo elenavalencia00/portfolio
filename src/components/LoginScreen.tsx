@@ -22,7 +22,7 @@ export function LoginScreen({ onLogin }: LoginScreenProps) {
           style={{
             width: "280px",
             height: "400px",
-            background: "#5a7fbe",
+            background: "#80a5e5ff",
             borderRight: "2px solid #3a6bb5",
           }}
         >
