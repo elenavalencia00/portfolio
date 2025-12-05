@@ -43,7 +43,7 @@
       {
         "id": 2,
         "name": "Pirate Chat",
-        "description": "Real-time chat application that automatically translates messages from English to pirate slang.",
+        "description": "Real-time chat application that automatically translates messages from English to pirate slang. Features API consumption for dynamic translation, multi-user support, and instant communication via websockets.",
         "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
         "image": "./piratechat.PNG",
         "link": "https://pirate-chat.vercel.app/"

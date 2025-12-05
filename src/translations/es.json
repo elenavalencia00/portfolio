@@ -43,7 +43,7 @@
       {
         "id": 2,
         "name": "Pirate Chat",
-        "description": "Aplicación de chat en tiempo real que traduce automáticamente los mensajes del inglés a jerga pirata.",
+        "description": "Aplicación de chat en tiempo real que traduce automáticamente los mensajes del inglés a jerga pirata. Utiliza consumo de APIs para traducción dinámica, soporte multiusuario y comunicación instantánea mediante websockets.",
         "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
         "image": "./piratechat.PNG",
         "link": "https://pirate-chat.vercel.app/"
