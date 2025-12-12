@@ -8,6 +8,7 @@ import { ProjectCard } from "./components/ProjectCard";
 import { LoginScreen } from "./components/LoginScreen";
 import { MusicPlayer } from "./components/MusicPlayer";
 import { useEffect } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const { t, i18n } = useTranslation();
@@ -136,6 +137,7 @@ export default function App() {
 
   return (
     <div className="h-screen pb-16 relative overflow-hidden">
+      <Analytics />
       <div
         className="fixed inset-0 bg-cover bg-center"
         style={{
