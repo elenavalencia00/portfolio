@@ -35,18 +35,24 @@
         "id": 1,
         "name": "Espacio Dependencia",
         "description": "SaaS en producción para el sector socio-sanitario. Desarrollo y mantenimiento de la interfaz de usuario, consumo de APIs, gestión de estados y formularios complejos y creación de componentes reutilizables ",
-        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI", "TailwindCSS"],
+        "tech": [
+          "React",
+          "TypeScript",
+          "TanStack Query",
+          "HeroUI",
+          "TailwindCSS"
+        ],
         "image": "/ed.PNG",
         "link": "https://github.com/elenavalencia00",
         "hideButton": true
       },
       {
         "id": 2,
-        "name": "Pirate Chat",
-        "description": "Aplicación de chat en tiempo real que traduce automáticamente los mensajes del inglés a jerga pirata. Utiliza consumo de APIs para traducción dinámica, soporte multiusuario y comunicación instantánea mediante websockets.",
-        "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
-        "image": "./piratechat.PNG",
-        "link": "https://pirate-chat.vercel.app/"
+        "name": "Tierra Roja Coffee",
+        "description": "Página web mockup para una marca de café artesanal. Diseño minimalista y elegante que refleja la calidad premium del producto.",
+        "tech": ["React", "TypeScript", "TailwindCSS", "Vite"],
+        "image": "/tierraroja.PNG",
+        "link": "https://tierra-roja.vercel.app/"
       },
       {
         "id": 3,
@@ -59,7 +65,7 @@
       {
         "id": 4,
         "name": "Homer's Web Page",
-        "description": "La mejor página web de todos los tiempos, creada por Homer Simpson.",
+        "description": "Creada por Homer Simpson.",
         "tech": ["HTML", "CSS"],
         "image": "./homer.PNG",
         "link": "https://elenavalencia00.github.io/Homer-s-Web-Page/"

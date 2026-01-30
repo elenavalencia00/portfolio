@@ -35,18 +35,18 @@
         "id": 1,
         "name": "Espacio Dependencia",
         "description": "SaaS currently in production for the social-healthcare sector. Features complex form management, state synchronization, and reusable component architecture.",
-        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI","i18next"],
+        "tech": ["React", "TypeScript", "TanStack Query", "HeroUI", "i18next"],
         "image": "/ed.PNG",
         "link": "https://github.com/elenavalencia00",
         "hideButton": true
       },
       {
         "id": 2,
-        "name": "Pirate Chat",
-        "description": "Real-time chat application that automatically translates messages from English to pirate slang. Features API consumption for dynamic translation, multi-user support, and instant communication via websockets.",
-        "tech": ["React", "TypeScript", "Vite", "Node.js", "Express", "Socket.io"],
-        "image": "./piratechat.PNG",
-        "link": "https://pirate-chat.vercel.app/"
+        "name": "Tierra Roja Coffee",
+        "description": "Mockup website for an artisanal coffee brand. Minimalist and elegant design that reflects the premium quality of the product.",
+        "tech": ["React", "TypeScript", "TailwindCSS", "Vite"],
+        "image": "/tierraroja.PNG",
+        "link": "https://tierra-roja.vercel.app/"
       },
       {
         "id": 3,
@@ -59,7 +59,7 @@
       {
         "id": 4,
         "name": "Homer's Web Site",
-        "description": "The best website of all time, created by Homer Simpson.",
+        "description": "Created by Homer Simpson.",
         "tech": ["HTML", "CSS"],
         "image": "./homer.PNG",
         "link": "https://elenavalencia00.github.io/Homer-s-Web-Page/"
