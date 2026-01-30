@@ -491,7 +491,7 @@ export default function App() {
           <MusicPlayer
             songs={[
               {
-                title: "Coffe in the Morning",
+                title: "Coffee in the Morning",
                 artist: "Aaron Taylor",
                 file: "/music/song1.mp3",
                 cover: "/music/cover1.jpeg",
