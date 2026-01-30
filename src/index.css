@@ -14,10 +14,19 @@ body {
 
 /* Animations */
 @keyframes blob {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  25% { transform: translate(20px, -50px) scale(1.1); }
-  50% { transform: translate(-20px, 20px) scale(0.9); }
-  75% { transform: translate(50px, 50px) scale(1.05); }
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -50px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(50px, 50px) scale(1.05);
+  }
 }
 
 @keyframes scale-in {
@@ -69,7 +78,7 @@ body {
   justify-content: space-between;
   font-weight: bold;
   font-size: 13px;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .y2k-title-buttons {
@@ -90,7 +99,7 @@ body {
   border: 1px solid #ffcce5;
   border-radius: 3px;
   cursor: pointer;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   transition: all 0.1s;
 }
 
@@ -100,7 +109,7 @@ body {
 
 .y2k-title-button:active {
   background: linear-gradient(to bottom, #ff85c1 0%, #ff5ca8 100%);
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .y2k-button {
@@ -112,9 +121,11 @@ body {
   font-size: 13px;
   font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4), inset 0 2px 4px rgba(255,255,255,0.3);
+  box-shadow:
+    0 4px 12px rgba(139, 92, 246, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
   transition: all 0.2s;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 10000;
   pointer-events: auto;
@@ -122,12 +133,16 @@ body {
 
 .y2k-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(139, 92, 246, 0.6), inset 0 2px 4px rgba(255,255,255,0.3);
+  box-shadow:
+    0 6px 16px rgba(139, 92, 246, 0.6),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .y2k-button:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4), inset 0 2px 4px rgba(0,0,0,0.2);
+  box-shadow:
+    0 2px 8px rgba(139, 92, 246, 0.4),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Y2K Scrollbar */
@@ -149,7 +164,6 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
 }
-
 
 .y2k-taskbar {
   position: fixed;
@@ -184,13 +198,12 @@ body {
   opacity: 0.8;
 }
 
-
 .taskbar-tab {
   background: linear-gradient(to bottom, #7bb3ff 0%, #5a9eff 100%);
   color: white;
   padding: 6px 12px;
   border: 1px solid #143a8a;
-  border-radius: 3px;
+  border-radius: 8px 3px 3px 3px;
   font-size: 12px;
   font-weight: 600;
   cursor: pointer;
@@ -201,7 +214,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.3), 1px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.3),
+    1px 1px 1px rgba(0, 0, 0, 0.3);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
   height: 32px;
   display: flex;
@@ -265,7 +280,7 @@ body {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .start-menu-content {
@@ -304,7 +319,13 @@ body {
 .start-menu-separator {
   border: none;
   height: 1px;
-  background: linear-gradient(to right, transparent 0%, #c0c0c0 20%, #c0c0c0 80%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    #c0c0c0 20%,
+    #c0c0c0 80%,
+    transparent 100%
+  );
   margin: 4px 0;
 }
 
@@ -345,7 +366,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.5), 1px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow:
+    inset 1px 1px 0 rgba(255, 255, 255, 0.5),
+    1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 /* Tech Badge */
@@ -362,17 +385,19 @@ body {
   box-shadow: 0 2px 8px rgba(139, 92, 246, 0.4);
 }
 
-
 /* XP Window Styles */
 .xp-window {
-  background-color: #ECE9D8;
-  box-shadow: 0 0 0 3px #0054E3, 0 0 0 4px #ECE9D8, 2px 2px 8px rgba(0,0,0,0.3);
+  background-color: #ece9d8;
+  box-shadow:
+    0 0 0 3px #0054e3,
+    0 0 0 4px #ece9d8,
+    2px 2px 8px rgba(0, 0, 0, 0.3);
   border-radius: 8px 8px 0 0;
   overflow: hidden;
 }
 
 .xp-title-bar {
-  background: linear-gradient(180deg, #0997FF 0%, #0053EE 100%);
+  background: linear-gradient(180deg, #0997ff 0%, #0053ee 100%);
   color: white;
   padding: 2px 8px;
   display: flex;
@@ -385,7 +410,7 @@ body {
 }
 
 .xp-title-bar-inactive {
-  background: linear-gradient(180deg, #BFCDDB 0%, #7A96DF 100%);
+  background: linear-gradient(180deg, #bfcddb 0%, #7a96df 100%);
 }
 
 .xp-title-buttons {
@@ -401,26 +426,30 @@ body {
   justify-content: center;
   font-size: 11px;
   font-weight: bold;
-  background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ece9d8 100%);
   color: #000;
-  box-shadow: inset -1px -1px 0 #ACA899, inset 1px 1px 0 #FFFFFF;
+  box-shadow:
+    inset -1px -1px 0 #aca899,
+    inset 1px 1px 0 #ffffff;
   border-radius: 2px;
   cursor: pointer;
 }
 
 .xp-title-button:hover {
-  background: linear-gradient(180deg, #FFF5E6 0%, #FFE6C9 100%);
+  background: linear-gradient(180deg, #fff5e6 0%, #ffe6c9 100%);
 }
 
 .xp-title-button:active {
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .xp-button {
   padding: 4px 16px;
-  background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 100%);
-  border: 1px solid #ACA899;
-  box-shadow: inset -1px -1px 0 #ACA899, inset 1px 1px 0 #FFFFFF;
+  background: linear-gradient(180deg, #ffffff 0%, #ece9d8 100%);
+  border: 1px solid #aca899;
+  box-shadow:
+    inset -1px -1px 0 #aca899,
+    inset 1px 1px 0 #ffffff;
   color: #000;
   font-size: 11px;
   font-weight: bold;
@@ -429,30 +458,31 @@ body {
 }
 
 .xp-button:hover {
-  background: linear-gradient(180deg, #FFF5E6 0%, #FFE6C9 100%);
+  background: linear-gradient(180deg, #fff5e6 0%, #ffe6c9 100%);
 }
 
 .xp-button:active {
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-
 
 ::-webkit-scrollbar {
   width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: #ECE9D8;
+  background-color: #ece9d8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #FFFFFF 0%, #ECE9D8 100%);
-  border: 1px solid #ACA899;
-  box-shadow: inset -1px -1px 0 #ACA899, inset 1px 1px 0 #FFFFFF;
+  background: linear-gradient(180deg, #ffffff 0%, #ece9d8 100%);
+  border: 1px solid #aca899;
+  box-shadow:
+    inset -1px -1px 0 #aca899,
+    inset 1px 1px 0 #ffffff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #FFF5E6 0%, #FFE6C9 100%);
+  background: linear-gradient(180deg, #fff5e6 0%, #ffe6c9 100%);
 }
 
 /* XP Taskbar */
@@ -462,16 +492,16 @@ body {
   left: 0;
   right: 0;
   height: 48px;
-  background-color: #245EDC;
+  background-color: #245edc;
   display: flex;
   align-items: center;
   padding: 0 8px;
   gap: 8px;
-  box-shadow: 0 -1px 0 rgba(255,255,255,0.3) inset;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.3) inset;
 }
 
 .xp-start-button {
-  background: linear-gradient(180deg, #6FC447 0%, #3C8C2E 100%);
+  background: linear-gradient(180deg, #6fc447 0%, #3c8c2e 100%);
   color: white;
   padding: 4px 16px;
   border-radius: 4px;
@@ -481,22 +511,24 @@ body {
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.3);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .xp-start-button:hover {
-  background: linear-gradient(180deg, #7FD457 0%, #4C9C3E 100%);
+  background: linear-gradient(180deg, #7fd457 0%, #4c9c3e 100%);
 }
 
 .xp-start-button:active {
-  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Tech Badge */
 .tech-badge {
   display: inline-block;
   padding: 2px 8px;
-  background-color: #0054E3;
+  background-color: #0054e3;
   color: white;
   font-size: 11px;
   border-radius: 2px;
